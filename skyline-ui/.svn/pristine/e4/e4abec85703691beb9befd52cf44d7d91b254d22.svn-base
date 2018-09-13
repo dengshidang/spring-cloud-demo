@@ -1,0 +1,78 @@
+<template>
+  <div class="model-deal m-t-10">
+    <!--深度图-->
+    <div class="trade-depth">
+      <h4>深度图</h4>
+      <div class="trade-depth-pic">
+        <img src="../../assets/img/深度图.png">
+      </div>
+    </div>
+    <!--实时成交数据-->
+    <div class="trade-data">
+      <div class="trade-data-head">
+        <span class="d-b f-l">最新成交</span>
+      </div>
+      <div class="trade-data-list">
+        <div class="trade-data-top">
+          <span class="trade-data-option">时间</span>
+          <span class="trade-data-option">类型</span>
+          <span class="trade-data-option">价格({{precoinName}})</span>
+          <span class="trade-data-option">数量({{sufcoinName}})</span>
+          <div class="clearfix"></div>
+        </div>
+        <div class="trade-data-main">
+          <!--显示最新15条数据-->
+          <div class="trade-data-row" v-for="item in list">
+            <span class="trade-data-option">{{item.time|subDate}}</span>
+            <span class="trade-data-option col-1">{{item.type}}</span>
+            <span class="trade-data-option">{{item.price}}</span>
+            <span class="trade-data-option">{{item.number}}</span>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</template>
+
+<script>
+    export default {
+        name: "TransactionData",
+        data(){
+          return{
+            params:{
+              marketId:this.$route.query.id,
+              pageNum:1,
+              pageSize:15
+            },
+            list:[],
+            precoinName:this.$route.query.precoinName,
+            sufcoinName:this.$route.query.sufcoinName,
+            timer:null,
+          }
+        },
+        methods:{
+          getNewTradeCord(){
+            clearInterval(this.timer);
+            this.timer=setInterval(()=> {
+              this.$Http.post('/trade/getNewTradeCord', this.params).then(resp => {
+                if (resp.data.code == "SUCCESS") {
+                  this.list = resp.data.result.list;
+                }
+              });
+            },1000);
+          }
+        },
+        mounted(){
+          this.getNewTradeCord();
+        },
+        destroyed(){
+          clearInterval(this.timer);s
+        }
+    }
+</script>
+
+<style scoped>
+  @import "../../assets/css/coin_trade.css";
+</style>

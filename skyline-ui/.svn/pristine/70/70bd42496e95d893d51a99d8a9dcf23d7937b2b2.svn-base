@@ -1,0 +1,107 @@
+import Vue from 'vue'
+import vuex from 'vuex'
+import utils from './../tool/util'
+import Base from './../tool/Base'
+Vue.use(vuex);
+
+export default new vuex.Store({
+  state:{
+    headBackground:utils.local.get('headBackground'),
+    isLogin:utils.local.get('token')!=null?true:false,
+    account :utils.local.get('account'),
+    mctSign:utils.local.get('mctSign'),
+    token:utils.local.get('token'),
+    uid:utils.local.get('uid'),
+    orderId:null,
+    isResponse:0,
+    message:'',
+    showNoLogin:false,
+    market:{},
+    buyCoinmarketprice:{},
+    sellCoinmarketprice:{},
+    uploadUrl:Base.uploadUrl,
+    //邀请注册地址
+    invitUrl:Base.invitUrl,
+  },
+  mutations:{
+    updateBack (state, val) {
+      state.headBackground =val;
+      utils.local.set('headBackground',val);
+      },
+    updateIsLogin(state,val){
+      state.isLogin=val;
+      utils.local.set('isLogin',val);
+      if(val==false){
+        utils.local.clear('token');
+      }
+    },
+    updateAccount(state,val){
+      if(val==false){
+        state.account=null;
+        utils.local.clear('account');
+      }else{
+        state.account=val;
+        utils.local.set('account',val);
+      }
+    },
+    updateMctSign(state,val){
+      state.mctSign=val;
+      utils.local.set('mctSign',val);
+    },
+    updateToken(state,val){
+      if(val==false){
+        state.token=null;
+        utils.local.clear('token');
+      }else{
+        state.token=val;
+        utils.local.set('token',val);
+      }
+    },
+    updateLogin(state,val){
+      if(val){
+        state.isLogin=true;
+        state.account=utils.local.get('account');
+        state.mctSign=utils.local.get('mctSign');
+        state.token=utils.local.get('token');
+      }else{
+        state.isLogin=false;
+        state.account=null;
+        state.mctSign=null;
+        state.token=null;
+        utils.local.clear('account');
+        utils.local.clear('mctSign');
+        utils.local.clear('token');
+      }
+    },
+    updateUid(state,val){
+      if(val==false){
+        state.uid=null;
+        utils.local.clear('uid');
+      }else{
+        state.uid=val;
+        utils.local.set('uid',val);
+      }
+    },
+    updateMessage(state,val){
+      state.message=val;
+    },
+    updateIsResponse(state){
+      state.isResponse++;
+    },
+    updateShowNoLogin(state,val){
+      state.showNoLogin=val;
+    },
+    uploadOrderId(state,val){
+      state.orderId=val;
+    },
+    setMarket(state,val){
+      state.market=val;
+    },
+    setBuyCoinmarketprice(state,val){
+      state.buyCoinmarketprice=val;
+    },
+    setSellCoinmarketprice(state,val){
+      state.SellCoinmarketprice=val;
+    }
+  }
+})
