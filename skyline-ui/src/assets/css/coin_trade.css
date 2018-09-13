@@ -1,0 +1,232 @@
+
+.trade-wrap{margin-top: 20px; padding: 10px 0 30px 10px; min-height: 100%; position: relative;}
+.trade-sidebar{width: 20%; min-height: 100%; float: left; position: relative;}
+.trade-cont{margin-left: 20%; padding-left: 10px; position: relative;}
+
+/*币币交易市场*/
+.model-market .hd{margin-bottom: 3px; background: #fff; padding: 20px 2% 0;}
+.model-market .hd ul{width: 100%;}
+.model-market .hd ul li{width: 50px; height: 26px; line-height: 26px; text-align: center; color: #333; margin-right: 10px; border-top-left-radius: 4px; border-top-right-radius: 4px; float: left;
+  cursor: pointer;}
+.model-market .hd ul li:nth-last-child(2){float: right;}
+.model-market .hd ul li.on{background: #1369d4; color: #fff; font-weight: 600;}
+.model-market .bd{background: #fff; padding-top: 1px; padding-bottom: 20px;}
+
+.market-search{width: calc(100% - 52px); padding: 0 10px; height: 36px; line-height: 36px; border-radius: 4px; border: 1px solid #d6d6d6; font-size: 12px; margin: 16px auto 16px;}
+.market-search input{display: block; width: 80%; float: left; height: 36px; line-height: 36px;}
+.market-search a{display: block; width: 18px; height: 18px; float: right; background: url(../img/icon-search.png) no-repeat; background-size: 100% 100%; margin-top: 9px;}
+
+.market-list-top{ width: 92%; margin: 0 auto; border-bottom: 1px solid #f2f4f9; padding-bottom: 10px;}
+.market-list-top span{display: block; float: left; width: 31%; cursor: pointer; overflow: hidden;}
+.market-list-top span .sortName{display: inline-block; font-style: normal;}
+.market-list-top span .sort{color: #d4d2d2; font-size: 14px; position: relative; display: inline-block; width: 10px; height: 14px; top: 1px;}
+.icon-asc{display: block; position: absolute; top: -4px;}
+.icon-desc{display: block; position: absolute; bottom: -3px;}
+.asc .icon-asc{color: #656565;}
+.desc .icon-desc{color: #656565;}
+.market-list-top span:nth-child(2),.market-list-top span:nth-child(3){text-align: right;}
+.market-list-top span:nth-child(1){padding-left: 1%; width: 27%;}
+.market-list-top span:nth-child(2){width: 35%;}
+.market-list-top span:nth-child(3){padding-right: 1%;}
+
+.market-list-main{width: calc(100% - 8px); padding-right: 8px;min-height: 620px; max-height: 860px; overflow: auto;}
+.market-row{padding: 0 16px; position: relative; height: 36px; line-height: 36px; border: 1px solid transparent;}
+.market-list-main .on{background: #f7f8fa; border: 1px solid #F7F8FA;}
+.market-row:hover{border: 1px solid rgba(19,105,212,0.16); cursor: pointer;}
+.market-star{display: block; position: absolute; left: 10px;}
+.market-star .fa{color: #1369D4; }
+.market-text{display: block; width: 31%; float: left; font-size: 12px;}
+.market-text:nth-child(2){padding-left: 12px;}
+.market-text label{font-weight: 600; margin-right: 3px;}
+
+/*市场公告*/
+.market-news{margin-top: 10px; background: #fff; padding: 20px 3%;}
+.market-news h4{padding: 0 10px 8px; border-bottom: 1px solid #e7e7e7;}
+.market-news-list{min-height: 500px; max-height: 700px; overflow: auto;}
+.market-news-list li{padding: 20px 10px 15px; border-bottom: 1px dashed #E7E7E7;}
+.market-news-list li:nth-last-child(1){border-bottom: none;}
+.market-news-list li a{display: block;}
+.market-news-tit{display: block; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 10px;}
+.market-news-time{display: block; font-size: 12px; color: #999;}
+
+/*分时图*/
+.model-chart{padding-bottom: 10px;}
+.chart-head{padding: 20px; height: 26px; line-height: 26px;}
+.chart-tab{width: 100%; height: 480px;}
+.icon-coin{display: block; width: 26px; height: 26px; float: left;}
+.chart-head span{display: block; float: left; margin-left: 6px; font-weight: 600;}
+.chart-head span:nth-child(6){margin-left: 30px;}
+
+/*买卖盘*/
+.model-plate{margin-top: 10px; height: 388px;}
+.plate-hang{width: calc(68.27% - 3%); padding: 0 1.5% 22px; float: left; background: #fff;}
+.plate-list{width: calc(34.5% - 10px);padding: 10px 1% 11px; float: right; background: #fff;}
+.plate-hang-head{border-bottom: 1px solid #E7E7E7;}
+.plate-hang-head span,.plate-hang-head a{display: block; padding: 10px;}
+.plate-hang-head span{border-bottom: 1px solid #333; margin-bottom: -1px;}
+.plate-hang-head a{color: #E14F4F;}
+.plate-form{width: 45%;}
+
+.plate-f-row{width: calc(100% - 0px); padding: 8px 10px 8px 0; border-radius: 3px; border: 1px solid #E7E7E7; margin-bottom: 22px;}
+.plate-f-text{display: block; width: 80px; height: 24px; line-height: 24px; float: left; text-align: center; border-right: 1px solid #E7E7E7;}
+.plate-f-unit{display: block; width: 50px; float: right; height: 24px; line-height: 24px; text-align: right;}
+.plate-f-inp{display: block; width: calc(100% - 150px); height: 24px; line-height: 24px; float: left; padding-left: 10px;}
+.range-num{width:100%; margin:10px 0;}
+.range-num-l{display:block; float:left;}
+.range-num-r{display:block; float:right;}
+.plate-f-foot{font-size:16px;}
+.plate-f-foot span{display:block; float:left; height:24px; line-height:24px}
+.plate-f-sub{display: block; width: 100%; height: 40px; line-height: 40px; border-radius: 3px; color: #fff; text-align: center; margin-top:22px;}
+
+.plate-list-top{padding: 0 10px 8px; border-bottom: 1px solid #E7E7E7;}
+.plate-list-tit{padding: 0 10px;}
+.plate-option{display: block; float: left; height: 20px; line-height: 20px; font-size: 12px; width: 30%; text-align: right;}
+.plate-option:nth-child(1){width: 10%; text-align: left;}
+.plate-list-block{padding: 12px 0;}
+.plate-list-row{margin-bottom: 5px; padding: 0 10px;}
+.plate-list-row:nth-last-child(1){margin-bottom: 0;}
+.plate-list-row:hover{background: #F6F6F6;}
+
+.plate-foot{padding: 0 10px;}
+.plate-deep{width: 100px; text-align: left;}
+.plate-deep .sel-top{text-align: left; padding:0 6px; font-size: 12px;}
+.plate-deep .sel-input {position: relative;}
+.plate-deep .sel-list{position: absolute; font-size: 12px; margin-top: 2px;}
+.plate-deep .sel-list li{padding: 4px 6px; text-align: left;}
+
+/*委托记录*/
+.model-order{margin-top: 10px; background: #fff; padding: 0 2% 10px; position: relative; height: 254px; overflow: hidden;}
+.model-order .hd{border-bottom: 1px solid #E7E7E7;}
+.model-order .hd ul li{width: 76px; text-align: center; padding: 12px 0 10px; border-bottom: 1px solid transparent; margin-bottom: -1px; float: left; margin-right: 20px; cursor: pointer;}
+.model-order .hd ul li.on{border-bottom: 1px solid #333;}
+.moderl-order-more{display: block; position: absolute; right: 4%; top: 12px;}
+.model-order .bd{padding: 0 10px;}
+.model-order-main{font-size: 12px;}
+.model-order-row{padding: 6px 0;}
+
+.order-option-1{display: block; height: 22px; line-height: 22px; float: left; width: 11.111111%; text-align: right;}
+.order-option-1:nth-child(1){width: 14.11111%; text-align: left;}
+.order-option-1:nth-child(2){width: 7.11111%; text-align: left;}
+.order-option-1:nth-child(3){width: 8.11111%; text-align: center;}
+.order-option-1:nth-child(6){width: 13.11111%;}
+.order-option-1:nth-child(9){width: 12.11111%; text-align: center;}
+
+.order-option-2{display: block; height: 22px; line-height: 22px; float: left; width: 12.5%; text-align: right;}
+.order-option-2:nth-child(1){width: 15%; text-align: left;}
+.order-option-2:nth-child(3){width: 10%;}
+.order-option-2:nth-child(8){width: 10%; text-align: center;}
+.model-order-operate{display: block; width: 42px; height: 22px; line-height: 22px; border-radius: 4px; background: #E14F4F; color: #fff; text-align: center; margin: 0 auto;}
+
+.order-no{width: 100%; height: 200px; display: flex; justify-content: center; align-content: center; align-items: center;}
+.order-no a{display: block; width: 120px; height: 30px; line-height: 30px; text-align: center; color: #fff; background: #E14F4F; font-size: 14px;}
+
+/*成交数据*/
+.trade-depth{width: 66%; padding: 10px 1%; float: left; background: #fff;}
+.trade-depth h4{padding: 0 10px 10px; border-bottom: 1px solid #E7E7E7;}
+.trade-depth-pic{width: 100%; height: 468px;}
+.trade-depth-pic img{display: block; width: 100%; height: 100%;}
+
+.trade-data{width: calc(34% - 10px); float: right; background: #fff;}
+.trade-data-head{width: 90%; padding: 10px 2%; margin: 0 auto; border-bottom: 1px solid #E7E7E7; overflow: hidden;}
+.trade-data-list{padding-bottom: 10px; font-size: 12px;}
+.trade-data-top{padding: 10px 5%;}
+.trade-data-main{height: 420px;}
+.trade-data-row{padding: 0 5%;}
+.trade-data-row:nth-child(even){background: #f6f6f6;}
+.trade-data-option{display: block; float: left; height: 28px; line-height: 28px;}
+.trade-data-option:nth-child(1){width: 20%;}
+.trade-data-option:nth-child(2){width: 15%; text-align: center;}
+.trade-data-option:nth-child(3),.trade-data-option:nth-child(4){width: 32.5%; text-align: right;}
+
+
+/*费率*/
+.rate-head{padding: 0 30px; height: 50px; line-height: 50px; font-size: 16px; background: #fff; margin-bottom: 4px;}
+.rate-tab-top{padding: 5px 5%; background: #ececec;}
+.rate-tab-row{padding: 0 5%; background: #fff;}
+.rate-tab-row:nth-child(even){background: #fcfcfc;}
+.rate-tab-main{max-height: 800px; overflow: auto;}
+.rate-option{display: block; float: left; height: 46px; line-height: 46px; width: 20%; text-align: right; overflow: hidden;}
+.rate-option:nth-child(1){width: 15%; text-align: left;}
+.rate-option:nth-child(2),.rate-option:nth-child(3){width: 30%;}
+.rate-icon{display: block; width: 16px; height: 16px; float: left; margin-right: 4px; margin-top: 15px;}
+.rate-type{display: block; float: left;}
+.rate-type label{font-weight: 600;}
+.rate-tips{padding: 0 5%;}
+.rate-tips div{margin-bottom: 6px;}
+
+/*买卖盘主页*/
+.coin-all-block{width: 49%;}
+.coin-all-block h3{padding: 0 20px 10px; font-size: 18px;}
+.coin-all-tab-top{padding: 5px 3%;}
+.coin-all-tab-main{min-height: 500px; max-height: 800px; overflow: auto; font-size: 12px;}
+.coin-all-row{padding: 0 3%;}
+.coin-all-row:nth-child(odd){background: #fcfcfc;}
+.coin-all-option{display: block; height: 50px; line-height: 50px; float: left; text-align: right; width: 26%;}
+.coin-all-option:nth-child(1){width: 10%; text-align: left;}
+
+/*委托详情*/
+.coin-order-wrap h4{padding: 0 20px 10px; font-size: 18px;}
+.coin-order-wrap .hd{padding: 0 20px; height: 50px; line-height: 50px; background: #fff; margin-bottom: 4px;}
+.coin-order-wrap .hd ul li{width: 120px; float: left; color: #333; cursor: pointer;}
+.coin-order-wrap .hd ul li.on{color: #E14F4F; font-weight: bold;}
+
+.coin-order-tab{position: relative;}
+
+.coin-order-search{position: absolute; width: auto; height: 24px; line-height: 24px; right: 20px; top: -40px;}
+.order-search-sel{width: 78px; float: left; font-size: 12px; margin-left: 10px;}
+.order-search-sel .sel-input{background: #f1f1f1; border-radius: 4px;}
+.order-search-inp{width: auto; float: left; height: 24px; line-height: 24px; font-size: 12px;}
+.order-search-inp input{display: block; width: 68px; padding-left: 4px; float: left; height: 22px; line-height: 22px; border: 1px solid #D6D6D6; border-radius: 4px; font-size: 12px;}
+.order-search-inp span{display: block; float: left; margin: 0 4px;}
+.order-search-inp select{display: block; width: 68px; float: left; border: 1px solid #D6D6D6; border-radius: 4px; height: 24px; line-height: 24px;}
+.order-search-time{width: 240px; float: left; margin-left: 14px;}
+.order-search-time .time-inp{display: block; width: 110px; float: left; height: 24px; line-height: 24px; border: 1px solid #D6D6D6; border-radius: 4px; font-size: 12px;}
+.order-search-time .time-inp:nth-child(3){float: right;}
+.order-search-time span{display: block; float: left; height: 24px; line-height: 24px;}
+.coin-order-search .search-btn{margin-top: 4px; margin-left: 10px; width: 20px; height: 18px; background: url(../img/icon-search3.png) no-repeat; background-size: 100% 100%;}
+
+.coin-order-top{padding: 5px 2%; background: #ececec;}
+.coin-order-main{background: #fff; min-height: 600px; max-height: 800px; overflow: auto; font-size: 12px;}
+.coin-order-row{padding: 0 2%;}
+.coin-order-row:nth-child(even){background: #fcfcfc;}
+.history-order .order-cont:nth-child(even) .coin-order-row{background: #fcfcfc;}
+
+.coin-order-option{display: block; width: 9%; height: 46px; line-height: 46px; float: left; text-align: right;}
+.coin-order-option:nth-child(1){width: 12%; text-align: left;}
+.coin-order-option:nth-child(2){ text-align: left;}
+.now-order .coin-order-option:nth-child(6){width: 10%;}
+.now-order .coin-order-option:nth-child(7){width: 10%;}
+.now-order .coin-order-option:nth-child(8){width: 10%;}
+.now-order .coin-order-option:nth-child(9){width: 10%;}
+.now-order .coin-order-option:nth-child(10){width: 12%; text-align: center;}
+
+.history-order .coin-order-option:nth-child(6){width: 10%;}
+.history-order .coin-order-option:nth-child(7){width: 10%;}
+.history-order .coin-order-option:nth-child(8){width: 10%;}
+.history-order .coin-order-option:nth-child(9){width: 10%;}
+.history-order .coin-order-option:nth-child(10){width: 12%; text-align: center;}
+
+.coin-order-operate{display: block; width: 40px; height: 20px; line-height: 20px; background: #E14F4F; color: #fff; border-radius: 4px; margin: 13px auto; }
+.coin-order-more{display: block; width: 100%; text-align: center; color: #1369D4;}
+
+.coin-order-detail{ padding: 16px 4% 10px;}
+.order-detail-top{background: #FCFCFC; padding: 0 20px;}
+.order-detail-main{padding: 0 20px;}
+.order-detail-option{display: block; width: 12.5%; float: left; height: 42px; line-height: 42px; text-align: right;}
+.order-detail-option:nth-child(1){text-align: left;}
+
+
+@media only screen and (max-width: 1440px) {
+  .trade-sidebar{width: 280px;}
+  .trade-cont{margin-left: 280px;}
+  .model-market .hd ul li{margin-right: 0;}
+}
+
+
+
+
+
+
+
+
+
